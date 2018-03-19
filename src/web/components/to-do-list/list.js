@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import ToDo from './toDo'
+import ToDo from './to-do'
 
 const List =  (
   props
