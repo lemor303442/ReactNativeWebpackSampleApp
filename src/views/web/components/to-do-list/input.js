@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { addToDo } from '../../actions'
+import { addToDo } from '../../../../actions'
 
 class Input extends Component{
   constructor(props){

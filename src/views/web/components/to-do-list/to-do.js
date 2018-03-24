@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 
-import { deleteToDo, changeIsFinished } from '../../actions'
+import { deleteToDo, changeIsFinished } from '../../../../actions'
 
 const ToDo = (
   props

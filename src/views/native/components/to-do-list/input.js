@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import {
   View,
   TextInput,
@@ -7,7 +9,9 @@ import {
   TouchableHighlight
 } from 'react-native'
 
-export default class Input extends Component{
+import { addToDo } from '../../../../actions'
+
+class Input extends Component{
   constructor(props){
 		super(props)
 		this.state = { 
@@ -18,9 +22,11 @@ export default class Input extends Component{
     this.setState({ text })
   }
   handleOnSubmit() {
-    console.log("handleOnSubmit")
-    console.log(this.state.text)
-    this.props.addToDo(this.state.text)
+    const { text } = this.state
+    this.props.addToDo({
+      isFinished: false,
+      content: text
+    })
     this.setState({
       text: ''
     })
@@ -42,6 +48,11 @@ export default class Input extends Component{
   }
 }
 
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({addToDo},dispatch)
+}
+
+export default connect (null, { addToDo })(Input)
 
 const styles = StyleSheet.create({
   textInput: {

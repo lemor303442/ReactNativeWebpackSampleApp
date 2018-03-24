@@ -1,1 +1,1 @@
-import App from "./src/web";
+import App from "./src/views/web";

@@ -2,11 +2,11 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
+const createStoreWithMiddleware = applyMiddleware()(createStore)
 
 import App from './components/app'
-import reducers from './reducers'
+import reducers from '../../reducers'
 
-const createStoreWithMiddleware = applyMiddleware()(createStore)
 
 export default App;
 ReactDOM.render(
