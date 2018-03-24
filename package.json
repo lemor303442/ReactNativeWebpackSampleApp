@@ -6,7 +6,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
-    "web": "webpack-dev-server --mode development ./index.webpack.js",
+    "web": "webpack-dev-server --mode development ./index.webpack.js --open",
     "test": "jest",
     "build": "webpack --mode production ./index.webpack.js"
   },
